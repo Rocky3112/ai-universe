@@ -12,6 +12,7 @@ const loadSpinner = (isLoading) => {
     loader.classList.add("d-none");
   }
 };
+// for sorting
 sortButton.addEventListener("click", () => {
 
   aiContainer.textContent = "";
@@ -40,17 +41,14 @@ const displayData1 = (data) => {
                   ${info.features[2] ? `<li>${info.features[2]}</li>` : ``}                  
                   ${info.features[3] ? `<li>${info.features[3]}</li>` : ``}                  
                   </ol>
-                      <p class="card-text">${info.description ? info.description : ""
-      }</p>
+                      <p class="card-text">${info.description ? info.description : ""}</p>
                      <p class="h4">${info.name}</p>
                      <div class="d-flex justify-content-between">
-                     <p class=""><i class="fa-solid fa-calendar-days"></i> ${info.published_in
-      }</p>
+                     <p class=""><i class="fa-solid fa-calendar-days"></i> ${info.published_in}</p>
     
     
                      <!-- Button trigger modal -->
-                     <button onclick="aiDetails2('${info.id
-      }')" type="button" class="border-0 btn btn-danger" data-bs-toggle="modal" data-bs-target="#aiModal">
+                     <button onclick="aiDetails2('${info.id}')" type="button" class="border-0 btn btn-danger" data-bs-toggle="modal" data-bs-target="#aiModal">
                      <i class="fa-solid fa-arrow-right"></i>
                      </button>
                      </div>
@@ -75,7 +73,7 @@ const loadData = (funcName) => {
 
 
 
-
+// for show all button 
 
 const seeMore = () => {
   loadSpinner(true);
@@ -266,9 +264,5 @@ const displayAiDetails = (data) => {
 `;
   modalContainer.appendChild(modalDiv);
 };
-const modalTop = () => {
-
-
-}
 
 loadData(displayData);
