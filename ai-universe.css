@@ -1,0 +1,18 @@
+.parent {
+    position: relative;
+  }
+
+  #btn-top {
+    
+    position: relative;
+    bottom: 420px;
+    right: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    #btn-top {
+    right: 10px;
+    position: relative;
+    bottom: 350px;
+  }
+}
